@@ -1,0 +1,16 @@
+<|start_prompt|>
+Task description: forecast the next {self.pred_len} steps 
+given the previous {self.seq_len} steps information; 
+Dataset description: {data_description}. 
+Input statistics: 
+data min value {data_min_values_str}, 
+data max value {data_max_values_str}, 
+data median value {data_median_values_str}, 
+the trend of input is {'upward' if trends[b] > 0 else 'downward'}, 
+top {lags_values_len} lags are : {lags_values_str}. 
+Expert description: {expert_description} 
+Forecasts statistics: 
+forecasts min value {forecasts_min_values_str}, 
+forecasts max value {forecasts_max_values_str}, 
+forecasts median value {forecasts_median_values_str}.
+<|<end_prompt>|>

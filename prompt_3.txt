@@ -1,0 +1,20 @@
+<|start_prompt|>
+Task description: forecast the next {self.pred_len} steps  
+with assigning three weights to expert forecasts 
+given the previous {str(self.seq_len)} steps information; 
+Dataset description: {self.description}. 
+Input statistics: 
+data min value {data_min_values_str}, 
+data max value {data_max_values_str}, 
+data median value {data_median_values_str}, 
+the trend of input is {'upward' if trends[b] > 0 else 'downward'}, 
+top {lags_values_len} lags are : {lags_values_str}. 
+Expert description: {self.expert_description}. 
+Forecasts statistics: 
+forecats min value {forecasts_min_values_str}, 
+forecats max value {forecasts_max_values_str}, 
+forecasts median value {forecasts_median_values_str}. 
+Weight assignment description: "
+Weights sum is equal to 1. "
+Weight assignment examples: {weight_examples}.
+<|<end_prompt>|>
